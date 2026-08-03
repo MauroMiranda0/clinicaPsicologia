@@ -8,7 +8,6 @@ export const PAYMENTS = [
     time: '14:00 - 15:00',
     amount: '$120.00',
     status: 'Overdue',
-    tone: 'error',
   },
   {
     id: 2,
@@ -19,7 +18,6 @@ export const PAYMENTS = [
     time: '09:30 - 10:30',
     amount: '$85.00',
     status: 'Pending',
-    tone: 'warning',
   },
   {
     id: 3,
@@ -30,7 +28,6 @@ export const PAYMENTS = [
     time: '11:00 - 12:30',
     amount: '$150.00',
     status: 'Processing',
-    tone: 'info',
   },
   {
     id: 4,
@@ -41,7 +38,6 @@ export const PAYMENTS = [
     time: '16:00 - 17:00',
     amount: '$95.00',
     status: 'Overdue',
-    tone: 'error',
   },
 ]
 

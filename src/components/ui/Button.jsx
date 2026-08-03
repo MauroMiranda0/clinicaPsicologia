@@ -16,6 +16,7 @@ const VARIANTS = {
 const SIZES = {
   sm: 'rounded-lg px-3 py-1.5 text-label-md',
   md: 'rounded-xl px-5 py-2.5 text-headline-sm',
+  lg: 'rounded-xl px-7 py-3.5 text-headline-md',
 }
 
 const ICON_ONLY_PADDING = {

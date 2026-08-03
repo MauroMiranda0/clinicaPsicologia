@@ -61,7 +61,7 @@ export const PATIENTS = [
 ]
 
 export const QUICK_ACTIONS = [
-  { label: 'Nueva Nota Clínica', icon: 'arrow_forward', to: '/panel' },
-  { label: 'Exportar Facturas', icon: 'download', to: '/pagos' },
-  { label: 'Configurar Horario', icon: 'settings', to: '/agendar' },
+  { label: 'Nueva Nota Clínica', icon: 'arrow_forward' },
+  { label: 'Exportar Facturas', icon: 'download' },
+  { label: 'Configurar Horario', icon: 'settings' },
 ]

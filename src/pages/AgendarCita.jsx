@@ -77,37 +77,41 @@ export default function AgendarCita() {
 
       <div className="mb-12 overflow-hidden rounded-xl border border-outline-variant bg-surface-container-lowest shadow-sm">
         {/* Stepper */}
-        <div className="flex border-b border-outline-variant bg-surface-container-low px-8 py-4">
-          {STEPS.map((label, i) => {
-            const num = i + 1
-            const active = num === step
-            const done = num < step
-            return (
-              <div key={label} className="flex items-center">
-                {i > 0 && <div className="mx-4 h-px w-8 self-center bg-outline-variant" />}
-                <div
-                  className={`flex items-center gap-2 text-label-md ${
-                    active
-                      ? 'text-primary'
-                      : done
+        <div className="scrollbar-hide overflow-x-auto border-b border-outline-variant bg-surface-container-low px-4 py-4 sm:px-8">
+          <div className="flex min-w-max">
+            {STEPS.map((label, i) => {
+              const num = i + 1
+              const active = num === step
+              const done = num < step
+              return (
+                <div key={label} className="flex items-center">
+                  {i > 0 && (
+                    <div className="mx-2 h-px w-4 self-center bg-outline-variant sm:mx-4 sm:w-8" />
+                  )}
+                  <div
+                    className={`flex items-center gap-2 text-label-md ${
+                      active
                         ? 'text-primary'
-                        : 'text-on-surface-variant opacity-50'
-                  }`}
-                >
-                  <span
-                    className={`flex h-6 w-6 items-center justify-center rounded-full text-[10px] ${
-                      active || done
-                        ? 'bg-primary text-on-primary'
-                        : 'border border-outline text-on-surface-variant'
+                        : done
+                          ? 'text-primary'
+                          : 'text-on-surface-variant opacity-50'
                     }`}
                   >
-                    {done ? <Icon name="check" className="text-[12px]" /> : num}
-                  </span>
-                  <span>{label}</span>
+                    <span
+                      className={`flex h-6 w-6 items-center justify-center rounded-full text-[10px] ${
+                        active || done
+                          ? 'bg-primary text-on-primary'
+                          : 'border border-outline text-on-surface-variant'
+                      }`}
+                    >
+                      {done ? <Icon name="check" className="text-[12px]" /> : num}
+                    </span>
+                    <span>{label}</span>
+                  </div>
                 </div>
-              </div>
-            )
-          })}
+              )
+            })}
+          </div>
         </div>
 
         <div className="p-8">

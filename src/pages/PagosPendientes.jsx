@@ -117,7 +117,7 @@ export default function PagosPendientes() {
       {/* Tabla */}
       <section className="overflow-hidden rounded-xl border border-outline-variant bg-surface shadow-sm">
         <div className="overflow-x-auto">
-          <table className="w-full border-collapse text-left">
+          <table className="w-full min-w-[720px] border-collapse text-left">
             <thead className="border-b border-outline-variant bg-surface-container-low">
               <tr>
                 <th className="px-6 py-4 text-label-sm uppercase tracking-wider text-on-surface-variant">
@@ -197,7 +197,7 @@ export default function PagosPendientes() {
             </tbody>
           </table>
         </div>
-        <div className="flex items-center justify-between border-t border-outline-variant bg-surface-container-low px-6 py-4">
+        <div className="flex flex-col gap-4 border-t border-outline-variant bg-surface-container-low px-6 py-4 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-label-md text-on-surface-variant">
             Mostrando {filtered.length} de 24 resultados
           </p>

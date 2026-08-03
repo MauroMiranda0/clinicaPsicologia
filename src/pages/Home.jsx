@@ -65,7 +65,7 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="hero-gradient relative flex min-h-[870px] items-center overflow-hidden px-margin-mobile py-20 md:px-margin-desktop">
+      <section className="hero-gradient relative flex min-h-[640px] items-center overflow-hidden px-margin-mobile py-16 md:min-h-[870px] md:px-margin-desktop md:py-20">
         <div className="relative z-10 mx-auto grid max-w-max-width grid-cols-1 items-center gap-12 md:grid-cols-2">
           <div className="max-w-xl space-y-8">
             <div className="inline-flex items-center gap-2 rounded-full bg-primary-fixed px-3 py-1 text-on-primary-fixed-variant">

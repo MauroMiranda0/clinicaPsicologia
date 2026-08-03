@@ -79,7 +79,7 @@ export default function PanelDashboard() {
             </Link>
           </div>
           <div className="overflow-x-auto">
-            <table className="w-full text-left">
+            <table className="w-full min-w-[600px] text-left">
               <thead className="border-b border-outline-variant bg-surface-container-low">
                 <tr>
                   <th className="px-6 py-4 text-label-sm text-on-surface-variant">PACIENTE</th>

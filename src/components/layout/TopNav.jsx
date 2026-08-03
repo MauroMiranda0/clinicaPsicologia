@@ -72,7 +72,7 @@ export default function TopNav() {
       </div>
 
       {mobileOpen && (
-        <div className="border-t border-outline-variant bg-surface px-margin-mobile py-4 md:hidden">
+        <div className="max-h-[calc(100vh-4rem)] overflow-y-auto border-t border-outline-variant bg-surface px-margin-mobile py-4 md:hidden">
           <nav className="flex flex-col gap-4">
             {NAV_ITEMS.map((item) => (
               <NavLink
@@ -89,6 +89,11 @@ export default function TopNav() {
               </NavLink>
             ))}
           </nav>
+          <div className="mt-4 border-t border-outline-variant pt-4">
+            <Button to="/agendar" className="w-full">
+              Reservar cita
+            </Button>
+          </div>
         </div>
       )}
     </header>

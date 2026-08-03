@@ -23,7 +23,7 @@ export function ToastProvider({ children }) {
       {children}
       <div
         aria-live="polite"
-        className={`fixed bottom-8 right-8 z-[100] flex items-center gap-3 rounded-lg bg-inverse-surface px-6 py-3 text-inverse-on-surface shadow-xl transition-all duration-300 ${
+        className={`fixed bottom-4 left-4 right-4 z-[100] flex items-center justify-center gap-3 rounded-lg bg-inverse-surface px-6 py-3 text-inverse-on-surface shadow-xl transition-all duration-300 sm:bottom-8 sm:left-auto sm:right-8 sm:justify-start ${
           toast ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0 pointer-events-none'
         }`}
       >

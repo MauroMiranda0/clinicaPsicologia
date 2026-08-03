@@ -82,12 +82,12 @@ export default function Home() {
               hacia la salud mental.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
-              <Link to="/agendar">
-                <Button icon="calendar_month">Reservar cita</Button>
-              </Link>
-              <Link to="/panel">
-                <Button variant="secondary">Conoce al equipo</Button>
-              </Link>
+              <Button to="/agendar" icon="calendar_month">
+                Reservar cita
+              </Button>
+              <Button to="/panel" variant="secondary">
+                Conoce al equipo
+              </Button>
             </div>
           </div>
           <div className="relative hidden md:block">
@@ -159,20 +159,20 @@ export default function Home() {
               profesional.
             </p>
             <div className="flex gap-4">
-              <button
+              <Button
                 onClick={prev}
+                icon="chevron_left"
+                iconOnly
+                variant="outline"
                 aria-label="Testimonio anterior"
-                className="flex h-12 w-12 items-center justify-center rounded-full border border-outline text-on-surface transition-colors hover:bg-primary hover:text-white"
-              >
-                <Icon name="chevron_left" />
-              </button>
-              <button
+              />
+              <Button
                 onClick={next}
+                icon="chevron_right"
+                iconOnly
+                variant="outline"
                 aria-label="Siguiente testimonio"
-                className="flex h-12 w-12 items-center justify-center rounded-full border border-outline text-on-surface transition-colors hover:bg-primary hover:text-white"
-              >
-                <Icon name="chevron_right" />
-              </button>
+              />
             </div>
           </div>
           <div className="w-full md:w-2/3">
@@ -210,22 +210,19 @@ export default function Home() {
             mejores especialistas.
           </p>
           <div className="relative z-10 flex flex-col justify-center gap-4 sm:flex-row">
-            <a
-              className="flex items-center justify-center gap-3 rounded-2xl bg-white px-10 py-4 text-headline-sm text-primary shadow-xl transition-all hover:bg-surface-bright"
+            <Button
               href={CLINIC_INFO.whatsapp}
               target="_blank"
               rel="noreferrer"
+              icon="chat"
+              variant="light"
+              size="lg"
             >
-              <Icon name="chat" /> WhatsApp Business
-            </a>
-            <Link to="/agendar">
-              <Button
-                variant="outline"
-                className="border-white/30 bg-primary-container text-on-primary-container hover:bg-primary-container/80"
-              >
-                Ver Disponibilidad
-              </Button>
-            </Link>
+              WhatsApp Business
+            </Button>
+            <Button to="/agendar" variant="onDark">
+              Ver Disponibilidad
+            </Button>
           </div>
         </div>
       </section>

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Icon from '../components/ui/Icon.jsx'
+import Button from '../components/ui/Button.jsx'
 import StatusChip from '../components/ui/StatusChip.jsx'
 import { useToast } from '../components/layout/ToastContext.jsx'
 import { STATS, PATIENTS, QUICK_ACTIONS } from '../data/pacientes.js'
@@ -113,30 +114,31 @@ export default function PanelDashboard() {
                     </td>
                     <td className="px-6 py-4 text-right">
                       <div className="flex justify-end gap-2">
-                        <button
+                        <Button
                           onClick={() => showToast(`Ficha de ${patient.name} abierta`)}
-                          className="rounded-lg p-2 text-on-surface-variant transition-all hover:bg-primary/5 hover:text-primary"
+                          icon="description"
+                          iconOnly
+                          variant="plain"
+                          size="sm"
                           title="Ver ficha"
-                        >
-                          <Icon name="description" />
-                        </button>
-                        <button
+                        />
+                        <Button
                           onClick={() => toggleStatus(patient.id)}
-                          className="rounded-lg p-2 text-on-surface-variant transition-all hover:bg-primary/5 hover:text-primary"
+                          icon={patient.status === 'Confirmado' ? 'toggle_on' : 'toggle_off'}
+                          iconOnly
+                          variant="plain"
+                          size="sm"
+                          iconFilled={patient.status === 'Confirmado'}
                           title="Cambiar estado"
-                        >
-                          <Icon
-                            name={patient.status === 'Confirmado' ? 'toggle_on' : 'toggle_off'}
-                            filled={patient.status === 'Confirmado'}
-                          />
-                        </button>
-                        <button
+                        />
+                        <Button
                           onClick={() => showToast(`Mensaje enviado a ${patient.name}`)}
-                          className="rounded-lg p-2 text-on-surface-variant transition-all hover:bg-primary/5 hover:text-primary"
+                          icon="chat"
+                          iconOnly
+                          variant="plain"
+                          size="sm"
                           title="Mensaje"
-                        >
-                          <Icon name="chat" />
-                        </button>
+                        />
                       </div>
                     </td>
                   </tr>

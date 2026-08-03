@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import Icon from '../ui/Icon.jsx'
+import Button from '../ui/Button.jsx'
 import { NAV_ITEMS } from '../../data/site.js'
 
 export default function TopNav() {
@@ -49,25 +50,24 @@ export default function TopNav() {
         </nav>
 
         <div className="flex items-center gap-4">
-          <button
-            className="hidden rounded-full p-2 text-on-surface-variant transition-colors hover:bg-surface-container md:block"
+          <Button
+            className="hidden md:inline-flex"
+            icon="notifications"
+            iconOnly
+            variant="plain"
             aria-label="Notificaciones"
-          >
-            <Icon name="notifications" />
-          </button>
-          <Link
-            to="/agendar"
-            className="hidden rounded-full bg-primary px-6 py-2 text-label-md text-on-primary transition-opacity hover:opacity-90 md:block"
-          >
+          />
+          <Button to="/agendar" className="hidden md:inline-flex" size="sm">
             Reservar cita
-          </Link>
-          <button
-            className="rounded-full p-2 text-on-surface-variant transition-colors hover:bg-surface-container md:hidden"
+          </Button>
+          <Button
+            className="md:hidden"
+            icon={mobileOpen ? 'close' : 'menu'}
+            iconOnly
+            variant="plain"
             onClick={() => setMobileOpen((v) => !v)}
             aria-label="Menú"
-          >
-            <Icon name={mobileOpen ? 'close' : 'menu'} />
-          </button>
+          />
         </div>
       </div>
 

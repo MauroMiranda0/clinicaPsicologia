@@ -160,18 +160,20 @@ export default function AgendarCita() {
                     <div className="mb-6 flex items-center justify-between px-2">
                       <h3 className="text-headline-sm">Noviembre 2024</h3>
                       <div className="flex gap-2">
-                        <button
-                          className="rounded-full p-2 transition-colors hover:bg-surface-container-highest"
+                        <Button
+                          icon="chevron_left"
+                          iconOnly
+                          variant="plain"
+                          size="sm"
                           aria-label="Mes anterior"
-                        >
-                          <Icon name="chevron_left" />
-                        </button>
-                        <button
-                          className="rounded-full p-2 transition-colors hover:bg-surface-container-highest"
+                        />
+                        <Button
+                          icon="chevron_right"
+                          iconOnly
+                          variant="plain"
+                          size="sm"
                           aria-label="Mes siguiente"
-                        >
-                          <Icon name="chevron_right" />
-                        </button>
+                        />
                       </div>
                     </div>
                     <div className="calendar-grid mb-4 text-center text-label-sm text-on-surface-variant">

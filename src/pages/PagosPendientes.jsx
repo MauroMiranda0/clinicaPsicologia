@@ -177,19 +177,17 @@ export default function PagosPendientes() {
                         <span className="text-label-sm text-on-surface-variant">Procesado</span>
                       ) : (
                         <>
-                          <button
+                          <Button
                             onClick={() => sendReminder(payment)}
-                            className="rounded-lg p-2 text-primary transition-colors hover:bg-primary-container"
+                            icon={sentReminder[payment.id] ? 'task_alt' : 'mail'}
+                            iconOnly
+                            variant="ghost"
+                            size="sm"
                             title="Enviar recordatorio"
-                          >
-                            <Icon name={sentReminder[payment.id] ? 'task_alt' : 'mail'} />
-                          </button>
-                          <button
-                            onClick={() => collectPayment(payment)}
-                            className="rounded-lg bg-primary px-4 py-1.5 text-label-sm font-semibold text-on-primary transition-opacity hover:opacity-90"
-                          >
+                          />
+                          <Button onClick={() => collectPayment(payment)} size="sm">
                             Cobrar
-                          </button>
+                          </Button>
                         </>
                       )}
                     </div>
@@ -204,31 +202,26 @@ export default function PagosPendientes() {
             Mostrando {filtered.length} de 24 resultados
           </p>
           <div className="flex gap-2">
-            <button
+            <Button
+              icon="chevron_left"
+              iconOnly
+              variant="outline"
+              size="sm"
               disabled
-              className="rounded-lg border border-outline-variant p-2 opacity-50"
               aria-label="Anterior"
-            >
-              <Icon name="chevron_left" className="text-sm" />
-            </button>
+            />
             {[1, 2, 3].map((n) => (
-              <button
-                key={n}
-                className={`rounded-lg px-3 py-1 text-label-md ${
-                  n === 1
-                    ? 'bg-primary text-on-primary'
-                    : 'border border-outline-variant text-on-surface hover:bg-surface-container'
-                }`}
-              >
+              <Button key={n} variant={n === 1 ? 'primary' : 'outline'} size="sm">
                 {n}
-              </button>
+              </Button>
             ))}
-            <button
-              className="rounded-lg border border-outline-variant p-2 hover:bg-surface-container"
+            <Button
+              icon="chevron_right"
+              iconOnly
+              variant="outline"
+              size="sm"
               aria-label="Siguiente"
-            >
-              <Icon name="chevron_right" className="text-sm" />
-            </button>
+            />
           </div>
         </div>
       </section>

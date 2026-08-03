@@ -50,14 +50,8 @@ export default function TopNav() {
         </nav>
 
         <div className="flex items-center gap-4">
-          <Button
-            className="hidden md:inline-flex"
-            icon="notifications"
-            iconOnly
-            variant="plain"
-            aria-label="Notificaciones"
-          />
-          <Button to="/agendar" className="hidden md:inline-flex" size="sm">
+          <Button icon="notifications" iconOnly variant="plain" aria-label="Notificaciones" />
+          <Button to="/agendar" className="max-md:hidden md:inline-flex" size="sm">
             Reservar cita
           </Button>
           <Button
@@ -89,11 +83,6 @@ export default function TopNav() {
               </NavLink>
             ))}
           </nav>
-          <div className="mt-4 border-t border-outline-variant pt-4">
-            <Button to="/agendar" className="w-full">
-              Reservar cita
-            </Button>
-          </div>
         </div>
       )}
     </header>
